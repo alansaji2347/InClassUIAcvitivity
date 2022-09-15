@@ -18,7 +18,11 @@ class MainActivity : AppCompatActivity() {
         // Step 1: Populate array
         val numberArray = IntArray(100)
 
-        spinner.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, numberArray.asList())
+        var fontSize = 2f
+        spinner.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, numberArray.asList(100)) {
+            i ->
+        }
+
 
 
 
@@ -32,8 +36,7 @@ class MainActivity : AppCompatActivity() {
 
             ) {
 
-                val selectedArray = parent?.getItemAtPosition(position).toString()
-                displayTextView.setTextSize(Text.parse)
+                fontSize = parent?.getItemAtPosition(position).toString().toFloat()
 
             }
 
@@ -43,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         // Step 3: Change TextView to saved text size
         changeButton.setOnClickListener {
 
-            displayTextView.textSize(Text.)
+           displayTextView.textSize = fontSize
 
         }
 
