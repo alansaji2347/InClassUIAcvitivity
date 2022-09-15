@@ -19,9 +19,10 @@ class MainActivity : AppCompatActivity() {
         val numberArray = IntArray(100)
 
         var fontSize = 2f
-        spinner.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, numberArray.asList(100)) {
-            i -> i + 1
-        }
+//        spinner.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, numberArray.asList(100)) {
+//            i -> i + 1
+//        }
+        spinner.adapter = NumberAdapter(this, 50)
 
 
 
