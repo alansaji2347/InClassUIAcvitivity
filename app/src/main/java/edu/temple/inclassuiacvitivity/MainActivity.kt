@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, numberArray.asList())
 
 
+
         // Step 2: Save selected text size
         spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -27,7 +29,11 @@ class MainActivity : AppCompatActivity() {
                 view: View?,
                 position: Int,
                 id: Long
+
             ) {
+
+                val selectedArray = parent?.getItemAtPosition(position).toString()
+                displayTextView.setTextSize(Text.parse)
 
             }
 
@@ -36,6 +42,8 @@ class MainActivity : AppCompatActivity() {
 
         // Step 3: Change TextView to saved text size
         changeButton.setOnClickListener {
+
+            displayTextView.textSize(Text.)
 
         }
 
