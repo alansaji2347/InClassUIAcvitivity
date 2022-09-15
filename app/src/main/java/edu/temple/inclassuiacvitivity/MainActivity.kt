@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         var fontSize = 2f
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, numberArray.asList(100)) {
-            i ->
+            i -> i + 1
         }
 
 
